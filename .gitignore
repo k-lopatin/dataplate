@@ -1,7 +1,3 @@
-
-# Created by https://www.gitignore.io/api/python
-
-### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -54,10 +50,6 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
-*.log
-local_settings.py
-
 # Flask stuff:
 instance/
 .webassets-cache
@@ -88,10 +80,4 @@ celerybeat-schedule
 venv/
 ENV/
 
-# Spyder project settings
-.spyderproject
-
-# Rope project settings
-.ropeproject
-
-# End of https://www.gitignore.io/api/python
+.idea

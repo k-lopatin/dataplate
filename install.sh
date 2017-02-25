@@ -1,14 +1,11 @@
-#!/bin/bash 
+#!/bin/bash
+
+source functions.sh
 
 # Install all needed dependencies
 sudo apt-get install pip3
 sudo apt-get install rabbitmq-server
+sudo apt-get install pylint
 
 # Run all install scripts of submodules
-submodule_dirs=`find ./ -depth -maxdepth 1 -type d ! -name '.*'`
-for submodule_dir in $submodule_dirs
-do
-    cd $submodule_dir
-    ./install.sh
-    cd ..
-done
+run_for_components ./install.sh
