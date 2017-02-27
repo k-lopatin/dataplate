@@ -4,4 +4,5 @@
 
 pylint3 modules
 cd ..
-python3 -m unittest collector.modules.github.tests.search
+coverage run --source=. -m unittest collector.modules.github.tests.search
+coverage report -m
