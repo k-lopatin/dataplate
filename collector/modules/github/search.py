@@ -12,7 +12,8 @@ class SearchService(object):
     search_word = ''
     results_number = 5
 
-    found_repos = []
+    found_lazy_repos = []
+    fetched_repos = []
 
     def __init__(self, search_word):
         self.search_word = search_word
@@ -21,6 +22,11 @@ class SearchService(object):
         self.results_number = number
         return self
 
-    def search_repositories(self):
-        self.found_repos = github3.search_repositories(self.search_word, number=self.results_number)
+    def search_repositories_lazy(self):
+        self.found_lazy_repos = github3.search_repositories(self.search_word, number=self.results_number)
+        return self
+
+    def fetch_found_lazy_repos(self):
+        for repo in self.found_lazy_repos:
+            self.fetched_repos.append(repo)
         return self
