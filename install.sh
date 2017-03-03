@@ -4,7 +4,7 @@ source functions.sh
 
 # Install all needed dependencies
 sudo apt-get install python3
-sudo apt-get install python3-pip
+yes Y | sudo apt-get install python3-pip
 sudo apt-get install rabbitmq-server
 sudo pip3 install pylint3
 
