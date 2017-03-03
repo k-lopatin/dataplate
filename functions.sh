@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# runs a command $2 in directories $1
+# runs a command $1 in directories $2
 function run_in_dirs {
-    for dir in $1
+    for dir in ${@:2} #iter starts from second argument
     do
         cd $dir
-        $2
+        $1
         cd ..
     done
 }
@@ -13,11 +13,11 @@ function run_in_dirs {
 # runs a command $1 in components
 function run_for_components {
     component_dirs=`find ./ -depth -maxdepth 1 -type d ! -name '.*'`
-    run_in_dirs $component_dirs $1
+    run_in_dirs $1 $component_dirs
 }
 
 # runs a command $1 in modules of component
 function run_for_modules {
     component_dirs=`find ./modules -depth -maxdepth 1 -type d ! -name '.*'`
-    run_in_dirs $component_dirs $1
+    run_in_dirs $1 $component_dirs
 }
