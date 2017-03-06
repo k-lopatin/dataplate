@@ -30,4 +30,5 @@ class TestSearch(unittest.TestCase):
                          .search_repositories_lazy()
                          .fetch_found_lazy_repos()
                          .fetched_repos)
+        print(fetched_repos)
         self.assertEqual(len(fetched_repos), test_results_number, 'Fetched repos are not found')

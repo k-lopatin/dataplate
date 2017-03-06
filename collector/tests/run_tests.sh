@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-python -m unittest modules
+python3 -m unittest modules
