@@ -81,3 +81,5 @@ venv/
 ENV/
 
 .idea
+
+node_modules
