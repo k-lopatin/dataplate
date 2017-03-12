@@ -83,3 +83,5 @@ ENV/
 .idea
 
 node_modules
+
+*.ini
