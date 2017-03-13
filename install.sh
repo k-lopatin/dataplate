@@ -3,6 +3,7 @@
 source functions.sh
 
 # Install all needed dependencies
+sudo apt-get update
 sudo apt-get install python3
 yes Y | sudo apt-get install python3-pip
 yes Y | sudo apt-get install rabbitmq-server
