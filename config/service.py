@@ -19,5 +19,6 @@ class ConfigService:
         for name, value in parameters.items():
             config[name] = value
 
+
 def _build_filename(component, module, name):
     return component + '/modules/' + module + '/config/' + name + '.ini'

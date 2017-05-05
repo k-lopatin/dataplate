@@ -14,6 +14,7 @@ npm install --save-dev webpack
 npm install --save-dev babel-loader babel-core
 npm install --save-dev babel-preset-es2015
 npm install --save-dev babel-preset-react
+npm install --save-dev react-d3-components
 
 echo '{ "presets": ["react","es2015"] }' > .babelrc
 
