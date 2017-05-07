@@ -11,6 +11,7 @@ module.exports={
                 test: /\.jsx$/,
                 exclude: /node_modules/,
                 loader: ['babel-loader', 'babel-loader?presets[]=es2015,presets[]=react']
+                // include: path.resolve(__dirname, 'src')
             }
         ]
     }

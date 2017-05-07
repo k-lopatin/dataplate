@@ -18,5 +18,5 @@ class VacanciesParser(object):
 
     def find_salary(self, salary_text):
         search = re.findall('"baseSalary" content="(\d*)"', salary_text)
-        return search[0]
+        return int(search[0])
 

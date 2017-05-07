@@ -26,8 +26,7 @@ class Parser(AbstractParser):
         current_page = self.get_page_by_link(start_link)
         self.process_page(current_page)
         self.go_through_pages(current_page)
-        print(self.salaries)
-        print(len(self.salaries))
+        return self.salaries
 
     def go_through_pages(self, page):
         max_num = self.get_max_page_num(page)
@@ -45,9 +44,8 @@ class Parser(AbstractParser):
 
     def get_max_page_num(self, page):
         search = re.findall('"HH-Pager-Control".*>(\d*)</a>', page)
-        found_num = int(search[-1])
-        if found_num > 1:
-            return found_num
-        return 1
+        if len(search) == 0:
+            return 1
+        return int(search[-1])
 
 

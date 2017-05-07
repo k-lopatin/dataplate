@@ -15,3 +15,6 @@ class ParserBuilder(object):
     def set_years_experience(self, years_experience):
         self.years_experience = years_experience
         return self
+
+    def __str__(self):
+        return "%s_%s_%s" % (self.language, self.region, self.years_experience)
